@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend", "Backend\Backend.csproj", "{6493BA8E-5FE0-479E-8C45-629ECF847B0F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GptBlog", "GptBlog\GptBlog.csproj", "{6493BA8E-5FE0-479E-8C45-629ECF847B0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
