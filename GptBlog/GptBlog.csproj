@@ -26,4 +26,8 @@
       <ProjectReference Include="..\GptBlog.Data\GptBlog.Data.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot\js" />
+    </ItemGroup>
+
 </Project>
