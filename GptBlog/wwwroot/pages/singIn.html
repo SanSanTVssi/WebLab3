@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="../Backend.styles.css" asp-append-version="true" />
 
 <div id="app">
-    <form @submit.prevent="submitForm">
+    <form @submit.prevent="submitForm" target="_top">
         <div class="form-group mb-3">
             <label for="email">Personal token:</label>
             <input type="email" class="form-control" id="email" v-model="personalToken" placeholder="Enter Personal token" required>
@@ -51,12 +51,16 @@
               this.personalToken = '';
               this.privateKey = '';
               this.rememberMe = false;
+
+              window.top.location.href = '/Home/Index';
             } else {
-              alert('Failed to submit form.');
+              response.text().then(errorMessage => {
+                alert(errorMessage);
+              });
             }
           })
           .catch(error => {
-            alert('An error occurred while submitting the form.');
+            alert('An error occurred while submitting the form. ' + error);
             console.error(error);
           });
       }
