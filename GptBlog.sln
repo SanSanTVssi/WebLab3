@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GptBlog", "GptBlog\GptBlog.csproj", "{6493BA8E-5FE0-479E-8C45-629ECF847B0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GptBlog.Data", "GptBlog.Data\GptBlog.Data.csproj", "{37FCFBA5-0C6F-47E7-89A9-F29B5D05D8FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GptBlog.Models", "GptBlog.Models\GptBlog.Models.csproj", "{212730D1-0A0A-4281-BF99-96FBF2A2A632}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{6493BA8E-5FE0-479E-8C45-629ECF847B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6493BA8E-5FE0-479E-8C45-629ECF847B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6493BA8E-5FE0-479E-8C45-629ECF847B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37FCFBA5-0C6F-47E7-89A9-F29B5D05D8FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37FCFBA5-0C6F-47E7-89A9-F29B5D05D8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37FCFBA5-0C6F-47E7-89A9-F29B5D05D8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37FCFBA5-0C6F-47E7-89A9-F29B5D05D8FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{212730D1-0A0A-4281-BF99-96FBF2A2A632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{212730D1-0A0A-4281-BF99-96FBF2A2A632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{212730D1-0A0A-4281-BF99-96FBF2A2A632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{212730D1-0A0A-4281-BF99-96FBF2A2A632}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -40,7 +40,24 @@ public class HomeController : Controller
     
     public IActionResult Profile()
     {
+        var userCookie = Request.Cookies["User"];
+        var isUserLoggedIn = !string.IsNullOrEmpty(userCookie);
+        if (!isUserLoggedIn)
+        {
+            return RedirectToAction("Index", "Home");
+        }
         return View();
+    }
+
+    [HttpPost]
+    public IActionResult RemoveCookie()
+    {
+        if (Request.Cookies["User"] != null)
+        {
+            Response.Cookies.Delete("User");
+        }
+
+        return RedirectToAction("Index");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
