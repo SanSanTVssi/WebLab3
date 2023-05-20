@@ -2,15 +2,16 @@ using Backend.Services;
 using GptBlog.Data;
 using GptBlog.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
-namespace Backend.Controllers;
+namespace GptBlog.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
 public class LoginController : ControllerBase
 {
     [HttpPost("signin")]
-    public IActionResult SignIn([FromBody] UserSignInModel formData)
+    public IActionResult SignIn([FromBody] SignInRequest formData)
     {
         try
         {
@@ -24,7 +25,7 @@ public class LoginController : ControllerBase
                 return BadRequest($"Profile not found");
             }
 
-            CookieHelper.CreateCookie("User", profile, formData.RememberMe ? 4000 : 1, Response);
+            // CookieHelper.CreateCookie("User", profile, formData.RememberMe ? 4000 : 1, Response);
         }
         catch (Exception ex)
         {
@@ -35,7 +36,7 @@ public class LoginController : ControllerBase
     }
 
     [HttpPost("signup")]
-    public IActionResult SignUp([FromBody] UserSignUpModel formData)
+    public IActionResult SignUp([FromBody] SingUpRequest formData)
     {
         try
         {
@@ -58,5 +59,18 @@ public class LoginController : ControllerBase
         }
         return Ok();
     }
-}
 
+    [HttpPost("profile")]
+    public IActionResult GetProfile([FromBody] GetProfileRequest profilePersonalToken)
+    {
+        Console.WriteLine(profilePersonalToken);
+        using var db = new ApplicationContext(OptionsBuilder.Options);
+        var profile = db.Profiles.ToList().Find(p => p.PersonalToken == profilePersonalToken.PersonalToken);
+        return Ok(JsonConvert.SerializeObject(new GetProfileResponse
+        {
+            GptName = profile.GptName,
+            GptFamily = profile.GptFamily,
+            PersonalToken = profile.PersonalToken
+        }));
+    }
+}

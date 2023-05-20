@@ -31,7 +31,7 @@
                     </div>
 
                     @{
-                        var author = Model.Item2.Find(p => p.Id == post.Autor) ?? new Profile();
+                        var author = Model.Item2.Find(p => p.PersonalToken == post.Author) ?? new Profile();
                     }
 
                     <div class="card-footer text-muted">

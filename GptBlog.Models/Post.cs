@@ -10,18 +10,18 @@ public class Post
     public string ImageLink { get; set; }
     public string Description { get; set; }
     public string Body { get; set; }
-    public int Autor { get; set; }
+    public string Author { get; set; }
     public string CreationTime { get; set; }
 
-    public static Post FromFromData(PostFormData formData, int id)
+    public static Post FromFromData(PostRequest request)
     {
         return new Post
         {
-            Title = formData.Title,
-            ImageLink = formData.ImageLink ?? string.Empty,
-            Description = formData.Description ?? string.Empty,
-            Body = formData.Body ?? string.Empty,
-            Autor = id,
+            Title = request.Title,
+            ImageLink = request.ImageLink ?? string.Empty,
+            Description = request.Description ?? string.Empty,
+            Body = request.Body ?? string.Empty,
+            Author = request.Author ?? string.Empty,
             CreationTime = DateTime.Now.ToLongDateString() ?? string.Empty
         };
     }

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>GptBlog.Controllers</RootNamespace>
+        <OutputType>Library</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GptBlog.Data\GptBlog.Data.csproj" />
+      <ProjectReference Include="..\GptBlog.Models\GptBlog.Models.csproj" />
+      <ProjectReference Include="..\GptBlog.Services\GptBlog.Services.csproj" />
+    </ItemGroup>
+
+</Project>
