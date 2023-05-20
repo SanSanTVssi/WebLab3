@@ -9,3 +9,18 @@ spiring AI community together.
 </div>
     </div>
 </template>
+
+<script>
+export default {
+  name: 'AboutUs',
+  computed: {
+    isUserLoggedIn() {
+      return document.cookie.includes('user');
+    },
+  }
+};
+</script>
+
+<style>
+
+</style>
