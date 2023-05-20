@@ -23,11 +23,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\GptBlog.Controllers\GptBlog.Controllers.csproj" />
       <ProjectReference Include="..\GptBlog.Data\GptBlog.Data.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="wwwroot\js" />
+      <ProjectReference Include="..\GptBlog.Services\GptBlog.Services.csproj" />
     </ItemGroup>
 
 </Project>

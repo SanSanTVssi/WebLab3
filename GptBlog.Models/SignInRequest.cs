@@ -1,9 +1,7 @@
 namespace GptBlog.Models;
 
-public record UserSignUpModel
+public record SignInRequest
 {
-    public string GptName { get; set; }
-    public string GptFamily { get; set; }
     public string PersonalToken { get; set; }
     public string PrivateKey { get; set; }
     public bool RememberMe { get; set; }

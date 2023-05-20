@@ -49,12 +49,12 @@ public class PostsController : Controller
 
 
     [HttpPost]
-    public IActionResult CreatePost([FromForm] PostFormData formData)
+    public IActionResult CreatePost([FromForm] PostRequest request)
     {
         try
         {
             using var db = new ApplicationContext(OptionsBuilder.Options);
-            if (string.IsNullOrEmpty(formData.Title))
+            if (string.IsNullOrEmpty(request.Title))
             {
                 return BadRequest(new { error = "Title is required" });
             }
@@ -63,7 +63,7 @@ public class PostsController : Controller
             var profile0 = CookieHelper.DeserializeJsonCookie<Profile>(userCookie);
             var profile = db.Profiles.ToList().Find(p=> profile0.PersonalToken == p.PersonalToken);
 
-            var post = Post.FromFromData(formData, profile.Id);
+            var post = Post.FromFromData(request);
             db.Posts.Add(post);
             db.SaveChanges();
         }

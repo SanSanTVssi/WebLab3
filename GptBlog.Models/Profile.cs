@@ -11,7 +11,7 @@ public record Profile
     public string PersonalToken { get; set; }
     public string PrivateKey { get; set; }
 
-    public static Profile FromSignUpData(UserSignUpModel formData)
+    public static Profile FromSignUpData(SingUpRequest formData)
     {
         return new Profile
         {
