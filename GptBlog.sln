@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GptBlog.Data", "GptBlog.Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GptBlog.Models", "GptBlog.Models\GptBlog.Models.csproj", "{212730D1-0A0A-4281-BF99-96FBF2A2A632}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GptBlog", "GptBlog\GptBlog.csproj", "{76C10ABE-67A2-494F-87F6-F1BC495F633C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GptBlog.Backend", "GptBlog.Backend\GptBlog.Backend.csproj", "{BE3EB13B-4106-4521-B9B8-4CB1B01D41BF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GptBlog.Services", "GptBlog.Services\GptBlog.Services.csproj", "{795E43DE-135F-4583-A233-7E04B376D0E5}"
@@ -26,10 +24,6 @@ Global
 		{212730D1-0A0A-4281-BF99-96FBF2A2A632}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{212730D1-0A0A-4281-BF99-96FBF2A2A632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{212730D1-0A0A-4281-BF99-96FBF2A2A632}.Release|Any CPU.Build.0 = Release|Any CPU
-		{76C10ABE-67A2-494F-87F6-F1BC495F633C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76C10ABE-67A2-494F-87F6-F1BC495F633C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76C10ABE-67A2-494F-87F6-F1BC495F633C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76C10ABE-67A2-494F-87F6-F1BC495F633C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BE3EB13B-4106-4521-B9B8-4CB1B01D41BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BE3EB13B-4106-4521-B9B8-4CB1B01D41BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE3EB13B-4106-4521-B9B8-4CB1B01D41BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
